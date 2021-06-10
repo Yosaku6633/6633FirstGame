@@ -25,5 +25,15 @@ public class uniformmotion: MonoBehaviour
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            this.transform.Translate(Vector3.up * Time.deltaTime * speed);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            this.transform.Translate(Vector3.down * Time.deltaTime * speed);
+        }
     }
 }
