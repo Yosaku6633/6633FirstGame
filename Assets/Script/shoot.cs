@@ -5,20 +5,50 @@ using UnityEngine;
 public class shoot : MonoBehaviour
 {
     public GameObject myPrefab;
+    public float intervalTime = 0.1f;
+    private float invokeTime;
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
+        invokeTime = intervalTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetKey(KeyCode.UpArrow))
         {
-            GameObject bullet = Instantiate(myPrefab);
-            bullet.transform.position = transform.position + new Vector3(0, 1f, 0);
+            invokeTime += Time.deltaTime;
+            if (invokeTime - intervalTime > 0)
+            {
+                GameObject bullet = Instantiate(myPrefab);
+                bullet.transform.position = transform.position + new Vector3(0, 1f, 0);
+                invokeTime = 0;
+            }
+
+            if (Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                invokeTime = intervalTime;
+            }
+
         }
-        
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            invokeTime += Time.deltaTime;
+            if (invokeTime - intervalTime > 0)
+            {
+                GameObject bullet = Instantiate(myPrefab);
+                bullet.transform.position = transform.position + new Vector3(-1f, 0, 0);
+                invokeTime = 0;
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                invokeTime = intervalTime;
+            }
+
+        }
+
     }
 }
