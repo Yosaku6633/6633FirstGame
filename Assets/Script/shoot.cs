@@ -27,27 +27,10 @@ public class shoot : MonoBehaviour
                 invokeTime = 0;
             }
 
-            if (Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                invokeTime = intervalTime;
-            }
-
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            invokeTime += Time.deltaTime;
-            if (invokeTime - intervalTime > 0)
-            {
-                GameObject bullet = Instantiate(myPrefab);
-                bullet.transform.position = transform.position + new Vector3(-1f, 0, 0);
-                invokeTime = 0;
-            }
-
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                invokeTime = intervalTime;
-            }
-
+            invokeTime = intervalTime;
         }
 
     }
