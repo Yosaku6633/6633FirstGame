@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Destroyentity : MonoBehaviour
 {
+    public int Score = 1;
+    public GameObject Enemyplane;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +20,20 @@ public class Destroyentity : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("zhuangshanglee");
         
 
-        Destroy(other.gameObject);
-        Destroy(this.gameObject);
+        //GameObject Enemyplane = myPrefab;
+
+        if (other.gameObject == Enemyplane)//检查碰撞的物体是不是敌机
+        {
+            Debug.Log("zhuangshangle");
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+
+            UIScore.Instance.totalscore += Score;
+            UIScore.Instance.Updatetotalscore();
+        }
+
+        
     }
 }
