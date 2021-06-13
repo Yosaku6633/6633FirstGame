@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3210455214530470300}
   - component: {fileID: 2834864532107630957}
   - component: {fileID: 8466287934583601510}
-  - component: {fileID: 8676822551042546039}
+  - component: {fileID: 1069912955302245063}
   m_Layer: 0
   m_Name: "\u5B50\u5F39"
   m_TagString: Untagged
@@ -110,7 +110,7 @@ CapsuleCollider:
   m_Height: 0.4068681
   m_Direction: 1
   m_Center: {x: 0.01836886, y: 0.012865685, z: 0}
---- !u!114 &8676822551042546039
+--- !u!114 &1069912955302245063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,9 +119,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7221364591844554680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072248ccded9aa34da28b51d5478084e, type: 3}
+  m_Script: {fileID: 11500000, guid: f6ddc9bc2161b894bbfab96d31922ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 1
-  Enemyplane: {fileID: 7097066150372570565, guid: 8b9e9afca2a46014a9651b3328f2b6c2,
+  Enemyplane: {fileID: 1420083395322373253, guid: 8b9e9afca2a46014a9651b3328f2b6c2,
     type: 3}

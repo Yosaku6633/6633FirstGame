@@ -5,12 +5,13 @@ using UnityEngine;
 public class Destroyentity : MonoBehaviour
 {
     public int Score = 1;
-    public GameObject Enemyplane;
+    //public GameObject Enemyplane;
 
     // Start is called before the first frame update
     void Start()
     {
         
+       
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class Destroyentity : MonoBehaviour
 
         //GameObject Enemyplane = myPrefab;
 
-        if (other.gameObject == Enemyplane)//检查碰撞的物体是不是敌机
+        if (other.gameObject.tag == "Enimy")//检查碰撞的物体是不是敌机
         {
             Debug.Log("zhuangshangle");
             Destroy(other.gameObject);
